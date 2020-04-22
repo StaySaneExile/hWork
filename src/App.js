@@ -21,13 +21,14 @@ class App extends React.Component {
 
     plus = () => {
         let newName = {name: this.text.current.value};
-        this.setState({names: [...this.state.names, newName]});
-        this.setState({
-            def: {count: this.state.def.count + 1},
-        })
+        this.setState(
+            {names: [...this.state.names, newName]});
+        this.setState(
+            {def: {count: this.state.def.count + 1}});
         alert(this.state.def.title + this.text.current.value);
         this.text.current.value = "";
     };
+
     render() {
         return (
             <div className={classes.main}>
@@ -36,7 +37,7 @@ class App extends React.Component {
                 </div>
                 <Button plus={this.plus}/>
                 <Span text={this.state.def.count}/>
-                <Input text={this.text} />
+                <Input text={this.text}/>
             </div>
         )
     }
