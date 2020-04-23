@@ -24,7 +24,8 @@ class App extends React.Component {
         this.setState(
             {names: [...this.state.names, newName]});
         this.setState(
-            {def: {count: this.state.def.count + 1}});
+            {def: {count: this.state.def.count + 1,
+                    title: this.state.def.title = 'Hello '}});
         alert(this.state.def.title + this.text.current.value);
         this.text.current.value = "";
     };
