@@ -17,9 +17,11 @@ class App extends React.Component {
             title: 'Hello '
         },
         names: [
-            {name: 'Gadjimurad'},],
+            {name: 'Gadjimurad'},
+        ],
         inputValue: "",
         title: ""
+
     };
 
     plus = () => {
@@ -29,13 +31,13 @@ class App extends React.Component {
             names: [...this.state.names, {name: this.state.inputValue}],
         })
         alert("Hello " + this.state.inputValue);
+        this.state.inputValue = ''
     };
 
     changeInputValue = (newTitle) => {
         this.setState({
-                inputValue: newTitle
-            }
-        )
+            inputValue: newTitle
+        });
     }
 
     render() {
@@ -51,7 +53,9 @@ class App extends React.Component {
                         <Span text={this.state.def.count}/>}/>
                     <Route path='/monday' render={() =>
                         <Input plus={this.plus}
-                               changeInputValue={this.changeInputValue}/>}/>
+                               changeInputValue={this.changeInputValue}
+                               inputValue={this.state.inputValue}
+                        />}/>
                 </div>
             </HashRouter>
         )

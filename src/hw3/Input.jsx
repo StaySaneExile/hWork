@@ -3,12 +3,11 @@ import "./Input.css";
 
 class Input extends React.Component {
     state = {
-        error: true,
-        inputValue: ""
+        error: true
     }
+
     changeValue = (e) => {
-        this.setState({error: false,
-        inputValue: e.currentTarget.value,})
+        this.setState({error: false})
         this.props.changeInputValue(e.currentTarget.value)
         if(e.currentTarget.value === "") {
             this.setState({error: true})
@@ -26,7 +25,9 @@ class Input extends React.Component {
             <div>
                 <input className={error}
                        onKeyPress={this.onKeyPress}
-                       onChange={this.changeValue}/>
+                       onChange={this.changeValue}
+                       value={this.props.inputValue}
+                />
             </div>
         )
     }
