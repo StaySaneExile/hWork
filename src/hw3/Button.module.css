@@ -1,7 +1,7 @@
 .button {
-    width: 140px;
-    height: 80px;
-    padding: 20px;
+    position: center;
+    width: 100px;
+    height: 60px;
     border-radius: 20px 20px 20px 20px;
     font-family: "Bauhaus 93";
     font-size: larger;
