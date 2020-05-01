@@ -3,11 +3,11 @@ import classes from "./Span.module.css";
 
 
 class Span extends React.Component {
-    render = (props) => {
+    render  ()  {
         return (
             <div>
             <span className={classes.span}>
-                {this.props.text}
+                {this.props.count}
             </span>
             </div>
         )

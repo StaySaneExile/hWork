@@ -7,8 +7,8 @@ class Input extends React.Component {
     }
 
     changeValue = (e) => {
-        this.setState({error: false})
-        this.props.changeInputValue(e.currentTarget.value)
+            this.setState({error: false})
+            this.props.changeInputValue(e.currentTarget.value)
         if(e.currentTarget.value === "") {
             this.setState({error: true})
         }
@@ -19,7 +19,7 @@ class Input extends React.Component {
         }
     }
 
-    render = () => {
+    render () {
         let error = this.state.error ? "error" : "input";
         return (
             <div>

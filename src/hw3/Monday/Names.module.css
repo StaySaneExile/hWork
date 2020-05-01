@@ -2,7 +2,11 @@
     padding: 10px;
     position: relative;
     display:flex;
+    width: 100px;
+    height: 250px;
     flex-direction:column;
+    border: 3px solid darkslategray;
+    border-radius: 10px;
 }
 
 

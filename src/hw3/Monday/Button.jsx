@@ -1,24 +1,22 @@
 import React from 'react';
-import classes from './Names.module.css';
+import classes from './Button.module.css';
 
 
-class Names extends React.Component {
+class Button extends React.Component {
 
-    render = (props) => {
-
-        let drawName = this.props.title.map(name => <span>{name.name}</span>)
-
+    render (props) {
         return (
-            <div className={classes.main}>
-                {drawName}
+            <div>
+                <button className={classes.button}
+                        onClick= {this.props.plus} >
+                    Milkyway
+                </button>
             </div>
-
 
         )
     }
 }
-
-export default Names;
+export default Button;
 
 //домашка от меня №3: создать компоненту, у которой:
 // - есть спан с числом, инпут и кнопка

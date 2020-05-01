@@ -1,19 +1,15 @@
 import React from 'react';
 import classes from './App.module.css';
-import Button from "./hw3/Button";
-import Span from "./hw3/Span";
-import Names from "./hw3/Names";
-import Input from "./hw3/Input";
 import Navbar from "./hw3/Navbar";
 import {HashRouter, Route} from "react-router-dom";
+import Monday from "./hw3/Monday";
 
 
 class App extends React.Component {
 
-    //text = React.createRef();
     state = {
         def: {
-            count: 6,
+            count: 8,
             title: 'Hello '
         },
         names: [
@@ -23,15 +19,15 @@ class App extends React.Component {
         title: ""
 
     };
-
     plus = () => {
-        this.setState({
-            count: this.state.def.count + 1,
+        this.setState(
+            {def : {count: this.state.def.count + 1},
             title: this.state.inputValue,
-            names: [...this.state.names, {name: this.state.inputValue}],
+            names: [...this.state.names, {name: this.state.inputValue}]
         })
         alert("Hello " + this.state.inputValue);
-        this.state.inputValue = ''
+        this.state.inputValue = '';
+
     };
 
     changeInputValue = (newTitle) => {
@@ -39,23 +35,17 @@ class App extends React.Component {
             inputValue: newTitle
         });
     }
-
     render() {
         return (
             <HashRouter>
                 <div className={classes.main}>
-                    <Navbar/>
+                    <Navbar />
                     <Route path='/monday' render={() =>
-                        <Names title={this.state.names}/>}/>
-                    <Route path='/monday' render={() =>
-                        <Button plus={this.plus}/>}/>
-                    <Route path='/monday' render={() =>
-                        <Span text={this.state.def.count}/>}/>
-                    <Route path='/monday' render={() =>
-                        <Input plus={this.plus}
-                               changeInputValue={this.changeInputValue}
-                               inputValue={this.state.inputValue}
-                        />}/>
+                        <Monday names={this.state.names}
+                                inputValue={this.state.inputValue}
+                                plus={this.plus}
+                                changeInputValue={this.changeInputValue}
+                                count={this.state.def.count}  />}/>
                 </div>
             </HashRouter>
         )
