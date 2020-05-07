@@ -5,10 +5,13 @@ import classes from './Button.module.css';
 class Button extends React.Component {
 
     render (props) {
+        let disable = this.props.inputValue === '';
         return (
+
             <div>
                 <button className={classes.button}
-                        onClick= {this.props.plus} >
+                        onClick= {this.props.plus}
+                        disabled={disable}>
                     Milkyway
                 </button>
             </div>
@@ -16,7 +19,7 @@ class Button extends React.Component {
         )
     }
 }
-export default Button;
+export default Button
 
 //домашка от меня №3: создать компоненту, у которой:
 // - есть спан с числом, инпут и кнопка

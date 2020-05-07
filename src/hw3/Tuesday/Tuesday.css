@@ -1,0 +1,54 @@
+.App {
+  background-color: #ffdca8;
+  border-radius: 7px;
+}
+.button-add {
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: darkgrey;
+}
+.todoList {
+  width: 700px;
+  margin: 0 auto;
+}
+.todoList > div {
+  padding: 10px;
+}
+.button-default {
+  background-color: darkgrey;
+  font-family: "Book Antiqua";
+  height: 30px;
+  border-radius: 5px;
+}
+.filter-active {
+  font-family: "Book Antiqua";
+  background-color: coral;
+  height: 30px;
+  border-radius: 5px;
+}
+.err {
+  border-color: red;
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+}
+.default {
+  border-color: lightpink;
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+}
+.todoList-task.done {
+  opacity: 0.5;
+}
+.todoList-tasks {
+  font-family: sans-serif;
+}
+
+.delete {
+  background: url(./../../cross.svg) no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  padding: 7px;
+}

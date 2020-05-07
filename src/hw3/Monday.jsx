@@ -11,7 +11,8 @@ class Monday extends React.Component {
         return (
             <div className={classes.main}>
                 <Names names={this.props.names} />
-                <Button plus={this.props.plus} />
+                <Button plus={this.props.plus}
+                        inputValue={this.props.inputValue}/>
                 <Span count={this.props.count} />
                 <Input changeInputValue={this.props.changeInputValue}
                        inputValue={this.props.inputValue}

@@ -2,6 +2,12 @@
     display: flex;
     padding: 10px;
     flex-wrap: wrap;
+    position: fixed;
+}
 
+.tuesday {
+    display: flex;
+    position: fixed;
+    left: 200px;
 }
 
