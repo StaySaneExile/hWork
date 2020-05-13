@@ -14,7 +14,7 @@ class App extends React.Component {
             title: 'Hello '
         },
         names: [
-            {name: 'Gadjimurad'},
+            {name: ''},
         ],
         inputValue: "",
         title: ""
