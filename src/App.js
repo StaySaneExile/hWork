@@ -38,8 +38,11 @@ class App extends React.Component {
             inputValue: newTitle
         });
     }
+
     componentDidMount() {
-        setTimeout(()=> {this.setState({loading: false})}, 5000)
+        setTimeout(() => {
+            this.setState({loading: false})
+        }, 5000)
     }
 
     render() {
@@ -47,19 +50,21 @@ class App extends React.Component {
             <HashRouter>
                 <div className={classes.main}>
                     <Navbar/>
-                    <Route path='/monday' render={() =>
-                        <Monday names={this.state.names}
-                                inputValue={this.state.inputValue}
-                                plus={this.plus}
-                                changeInputValue={this.changeInputValue}
-                                count={this.state.def.count}/>}/>
                     {this.state.loading
                         ? <span className={classes.loading}></span>
-                    : <div className={classes.tuesday}>
-                            <Route path='/tuesday' render={() =>
-                                <Tuesday/>}/>
-                        </div>}
-
+                        : <div>
+                            <Route path='/monday' render={() =>
+                                <Monday names={this.state.names}
+                                        inputValue={this.state.inputValue}
+                                        plus={this.plus}
+                                        changeInputValue={this.changeInputValue}
+                                        count={this.state.def.count}/>}/>
+                            <div className={classes.tuesday}>
+                                <Route path='/tuesday' render={() =>
+                                    <Tuesday/>}/>
+                            </div>
+                        </div>
+                    }
                 </div>
             </HashRouter>
         )
