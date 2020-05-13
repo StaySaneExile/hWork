@@ -17,7 +17,8 @@ class App extends React.Component {
             {name: ''},
         ],
         inputValue: "",
-        title: ""
+        title: "",
+        loading: true
 
     };
     plus = () => {
@@ -37,6 +38,9 @@ class App extends React.Component {
             inputValue: newTitle
         });
     }
+    componentDidMount() {
+        setTimeout(()=> {this.setState({loading: false})}, 5000)
+    }
 
     render() {
         return (
@@ -49,10 +53,13 @@ class App extends React.Component {
                                 plus={this.plus}
                                 changeInputValue={this.changeInputValue}
                                 count={this.state.def.count}/>}/>
-                    <div className={classes.tuesday}>
-                        <Route path='/tuesday' render={() =>
-                            <Tuesday/>}/>
-                    </div>
+                    {this.state.loading
+                        ? <span className={classes.loading}></span>
+                    : <div className={classes.tuesday}>
+                            <Route path='/tuesday' render={() =>
+                                <Tuesday/>}/>
+                        </div>}
+
                 </div>
             </HashRouter>
         )

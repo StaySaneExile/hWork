@@ -3,6 +3,7 @@ import TodoHeader from "./TodoHeader";
 import TodoTasks from "./TodoTasks";
 import TodoFooter from "./TodoFooter";
 import "./Tuesday.css"
+import {restoreState} from "../../store";
 
 
 
@@ -18,32 +19,22 @@ class Tuesday extends React.Component {
         localStorage.setItem('state', stateAsString)
     }
     restoreState = () => {
-        let state = {
-            tasks:[],
-            filterValue: "All"
-        }
-        let stateAsString = localStorage.getItem('state');
-        if(stateAsString){
-            state = JSON.parse(stateAsString);
-        }
+        let state = restoreState('state', this.state)
         this.setState(state, ()=>{
             this.state.tasks.forEach(t=>{
                 if(t.id >= this.nextTaskId) {
-                    this.nextTaskId = t.id + 1
-                }
-            })
+                    this.nextTaskId = t.id + 1}})
         });
     }
     componentDidMount() {
         this.restoreState();
     }
-
     addTask = (newTitle) => {
         let newTask = {
             id: this.nextTaskId,
             title: newTitle,
             isDone: false,
-            priority: ' low'};
+        };
         this.nextTaskId++;
         this.setState({tasks: [...this.state.tasks, newTask]}, this.saveState);
 

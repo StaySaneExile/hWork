@@ -2,7 +2,7 @@ import React from 'react';
 import TodoTask from "./TodoTask"
 import PropTypes from 'prop-types';
 import "./Tuesday.css"
-import TodoFooter from "./TodoFooter";
+
 
 class TodoTasks extends React.Component {
     render = () => {

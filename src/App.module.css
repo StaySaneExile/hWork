@@ -1,13 +1,22 @@
 .main {
     display: flex;
     padding: 10px;
-    flex-wrap: wrap;
-    position: fixed;
+
 }
 
 .tuesday {
     display: flex;
     position: fixed;
     left: 200px;
+}
+.loading {
+    display: flex;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    left: 300px;
+    top: 150px;
+    background: url(./496.gif) no-repeat center;
+    background-size: contain;
 }
 
