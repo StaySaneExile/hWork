@@ -26,7 +26,7 @@ class TodoHeader extends React.Component {
         }
     }
     render = () => {
-        let error = this.state.error ? "err" : "default";
+        let error = this.state.error ? "err" : "default-header";
         return (
             <div className="todoList">
                 <div className="todoList-header">

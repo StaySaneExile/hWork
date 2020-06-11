@@ -14,15 +14,18 @@
     display: flex;
     width: 400px;
     height: 300px;
+    font-size: 25px;
+    color: lightcoral;
     border-radius: 3px;
     justify-content: center;
-    background-color: darkgrey;
+    background-color: #0e1017;
     margin-left: 200px;
 }
 .blue {
     display: flex;
     width: 400px;
     height: 300px;
+    font-size: 25px;
     border-radius: 3px;
     justify-content: center;
     background-color: steelblue;
