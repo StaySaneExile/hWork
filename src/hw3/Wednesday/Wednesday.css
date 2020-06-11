@@ -1,0 +1,30 @@
+.default {
+    display: flex;
+    width: 400px;
+    height: 300px;
+    border-radius: 3px;
+    font-family: Dialog;
+    font-size: 25px;
+    justify-content: center;
+    background-color: lightpink;
+    margin-left: 200px;
+}
+
+.dark {
+    display: flex;
+    width: 400px;
+    height: 300px;
+    border-radius: 3px;
+    justify-content: center;
+    background-color: darkgrey;
+    margin-left: 200px;
+}
+.blue {
+    display: flex;
+    width: 400px;
+    height: 300px;
+    border-radius: 3px;
+    justify-content: center;
+    background-color: steelblue;
+    margin-left: 200px;
+}
